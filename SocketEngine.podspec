@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SocketEngine'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of SocketEngine.'
 
 # This description is used to generate tags and improve search results.
@@ -16,6 +16,8 @@ Pod::Spec.new do |s|
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
+    
+  s.description      = 'socketEngine'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -30,8 +32,16 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'SocketEngine/Classes/**/*'
+  s.source_files = 'SocketEngine/**/*'
   
+  s.dependency 'CocoaAsyncSocket'
+    
+  s.pod_target_xcconfig = {
+      'VALID_ARCHS' => 'x86_64 armv7 arm64'
+  }
+
+  s.public_header_files = 'Pod/Classes/**/*'
+    
   # s.resource_bundles = {
   #   'SocketEngine' => ['SocketEngine/Assets/*.png']
   # }

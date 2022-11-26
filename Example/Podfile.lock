@@ -1,0 +1,31 @@
+PODS:
+  - CocoaAsyncSocket (7.6.5)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SocketEngine (1.0.0):
+    - CocoaAsyncSocket
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - SocketEngine (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - CocoaAsyncSocket
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  SocketEngine:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SocketEngine: 4ee61081d52e42b8cb8f3cf6130cd9ccfafd6ca7
+
+PODFILE CHECKSUM: 9fe1fbfee3ff70417ca1968a43a0dd3f9f5078f5
+
+COCOAPODS: 1.11.3

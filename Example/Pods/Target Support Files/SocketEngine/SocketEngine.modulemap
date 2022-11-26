@@ -1,0 +1,6 @@
+framework module SocketEngine {
+  umbrella header "SocketEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}
