@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "SocketConfig.h"
+#import "SocketEngine.h"
 
 FOUNDATION_EXPORT double SocketEngineVersionNumber;
 FOUNDATION_EXPORT const unsigned char SocketEngineVersionString[];

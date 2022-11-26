@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SocketEngine'
-  s.version          = '1.0.0'
+  s.version          = '1.0.2'
   s.summary          = 'A short description of SocketEngine.'
 
 # This description is used to generate tags and improve search results.
@@ -23,11 +23,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Mateen/SocketEngine'
+  s.homepage         = 'https://github.com/MateenHJL/SocketEngine'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Mateen' => '13162378587@163.com' }
-  s.source           = { :git => 'https://github.com/Mateen/SocketEngine.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/MateenHJL/SocketEngine', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'

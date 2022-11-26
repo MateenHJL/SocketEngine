@@ -22,7 +22,8 @@ typedef NS_ENUM(NSInteger , SocketEngineStatus) {
 typedef void(^socketStatusHasChangedBlock)(SocketEngineStatus stauts);
 typedef void(^sockeHastWriteDataCompletedBlock)(GCDAsyncSocket *socketEngine, NSInteger tag);
 typedef NSMutableData *_Nonnull(^socketWriteDataWhenConnectingBlock)(void);
-typedef BOOL(^socketHasReceivedDataBlock)(GCDAsyncSocket *socketEngine, NSData *receivedData, NSInteger tag);
+typedef void(^socketHasReceivedDataBlock)(GCDAsyncSocket *socketEngine, NSData *receivedData, NSInteger tag);
+typedef BOOL(^socketReceivedDataIsCorrectBlock)(GCDAsyncSocket *socketEngine, NSData *receivedData, NSInteger tag);
 
 @interface SocketEngine : NSObject
 
@@ -49,6 +50,9 @@ typedef BOOL(^socketHasReceivedDataBlock)(GCDAsyncSocket *socketEngine, NSData *
 
 //接受到socket信息
 @property (nonatomic, copy  ) socketHasReceivedDataBlock socketHasReceivedDataBlock;
+
+//校验收到的信息是否是正确的
+@property (nonatomic, copy  ) socketReceivedDataIsCorrectBlock socketReceivedDataIsCorrectBlock;
 
 @end
 

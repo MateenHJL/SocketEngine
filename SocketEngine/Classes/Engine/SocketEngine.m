@@ -142,10 +142,15 @@
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
-    @synchronized (self) {
-        if (self.socketHasReceivedDataBlock)
-        {
-            self.socketHasReceivedDataBlock(sock, data, tag);
+    BOOL isCorrect = self.socketReceivedDataIsCorrectBlock(sock,data,tag);
+    if (isCorrect)
+    {
+        @synchronized (self) {
+            [self.receivedData appendData:data];
+            if (self.socketHasReceivedDataBlock)
+            {
+                self.socketHasReceivedDataBlock(sock, self.receivedData, tag);
+            }
         }
     }
 }
